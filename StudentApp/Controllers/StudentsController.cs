@@ -20,7 +20,6 @@ namespace StudentApp.Controllers
             _context = context;
         }
 
-        // GET: Students
         public async Task<IActionResult> Index()
         {
             return View(await _context.Student.ToListAsync());
