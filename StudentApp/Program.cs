@@ -4,7 +4,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<StudentAppContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("StudentAppContext"), sql=>sql.MigrationsAssembly(typeof(Program).Assembly.GetName().Name)));
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
