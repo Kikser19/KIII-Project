@@ -23,6 +23,5 @@ jobs:
    
     - name: Build and push Docker image
       run: |
-        cd StudentApp
-        docker build -t kikser19/kiii-project:latest .
+        docker build -t kikser19/kiii-project:latest ./StudentApp
         docker push kikser19/kiii-project:latest
