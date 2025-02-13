@@ -9,9 +9,11 @@ services:
     image: mcr.microsoft.com/mssql/server:2022-latest
     ports:
      - 8002:1433
+    env_file:
+     - .env
     environment:
-     - ACCEPT_EULA=Y
-     - MSSQL_SA_PASSWORD=Kikser.2001
+     - ACCEPT_EULA=${ACCEPT}
+     - MSSQL_SA_PASSWORD=${PASSWORD}
     networks:
      - studentappnetwork
   studentapp:
